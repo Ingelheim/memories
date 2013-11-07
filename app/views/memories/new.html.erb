@@ -1,0 +1,11 @@
+<%= form_for @memory do |f| %>
+  <%= f.file_field :file, :multiple => true %>
+  <%= f.submit "Upload" %>
+<% end %>
+
+
+<% if @memories %>
+<% @memories.each do |memory| %>
+<%= image_tag(memory, class: "img")%>
+<% end %>
+<% end %>

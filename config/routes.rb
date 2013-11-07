@@ -1,7 +1,10 @@
 Memories::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  root :to => 'welcome#index'
+  root :to => 'memories#new'
+
+  resources :memories
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
