@@ -3,10 +3,12 @@
   // alert('success!');
   console.log(<%= @memories %>);
 
+  $('#ajax').hide();
+
 
   var myStringArray = <%= @memories %>;
   for (var i = 0; i < myStringArray.length; i++) {
-    $('.container').append("<img src='"+myStringArray[i]+"'>");
+    $('.container').append("<img class='img' src='"+myStringArray[i]+"'>");
 
     //Do something
 }
