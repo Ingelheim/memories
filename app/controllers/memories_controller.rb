@@ -4,8 +4,8 @@ class MemoriesController < ApplicationController
   end
 
 	def create
+    p "YESS" if remotipart_submitted?
 		files = params[:memory][:file]
-		p files
 		@memories = []
     files.each do |file|
     	u = Memory.new
@@ -17,6 +17,7 @@ class MemoriesController < ApplicationController
     # u.memory.current_path # => 'path/to/file.png'
     # u.memory.identifier # => 'file.png'
     @memory = Memory.new
-    render 'memories/new'
+    # render 'memories/new'
 	end
 end
+

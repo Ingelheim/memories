@@ -1,6 +1,16 @@
-<%= form_for @memory do |f| %>
-  <%= f.file_field :file, :multiple => true %>
-  <%= f.submit "Upload" %>
+<div class="container">
+	<h1> Memories </h1>
+	<p class='para'>In 3 einfachen Schritten vom Handyfoto zum Print, der zu dir nach Hause kommt!</p>
+
+	<p class='para'>Schritt 1: Waehle deine Bilder aus, die du gedruckt haben moechtest (du kannst im Nachhinein weitere Bilder hinzufuegen oder Bilder entfernen) <p>
+
+<%= form_for @memory, :remote => true do |f| %>
+<div class="field">
+  <%= f.file_field :file, :multiple => true, accept: 'image/png,image/gif,image/jpeg'%>
+</div>
+<div class="actions">
+  <%= f.submit "Hochladen", class: 'submit', disabled: true %>
+</div>
 <% end %>
 
 
@@ -9,3 +19,6 @@
 <%= image_tag(memory, class: "img")%>
 <% end %>
 <% end %>
+
+
+</div>

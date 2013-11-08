@@ -1,0 +1,17 @@
+<%= remotipart_response do %>
+  // Display a Javascript alert
+  // alert('success!');
+  console.log(<%= @memories %>);
+
+
+  var myStringArray = <%= @memories %>;
+  for (var i = 0; i < myStringArray.length; i++) {
+    $('.container').append("<img src='"+myStringArray[i]+"'>");
+
+    //Do something
+}
+
+
+
+
+<% end %>
